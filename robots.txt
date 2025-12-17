@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://putriismahashilah.com/sitemap.xml
+Sitemap: https://putriismahashilah.github.io/Portofolio/sitemap.xml
