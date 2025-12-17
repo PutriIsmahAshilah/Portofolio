@@ -101,6 +101,72 @@ background:#fff;
     box-shadow:0 30px 60px rgba(124,108,255,.25);
 }
 
+/* TIMELINE PENDIDIKAN */
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #6a5acd; /* ungu elegan */
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    background: #6a5acd;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    background: rgba(255,255,255,0.08);
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.timeline-content span {
+    font-size: 14px;
+    color: #888;
+}
+
+.timeline-content p {
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+/* DARK MODE SUPPORT */
+body.dark .timeline::before,
+body.dark .timeline-dot {
+    background: #b9a7ff;
+}
+
+body.dark .timeline-content {
+    background: rgba(255,255,255,0.05);
+}
+
 /* ===== PROFILE GRID ===== */
 .profile-grid{
     display:grid;
@@ -539,3 +605,4 @@ body.dark footer{
     background:#0a0a18;
     color:#9fa4ff;
 }
+
