@@ -1748,3 +1748,22 @@ body.dark #project li{
     }
 }
 
+/* =========================================================
+   FINAL MOBILE CERT FIX
+========================================================= */
+
+@media(max-width:768px){
+
+    .cert-grid{
+        display:grid !important;
+
+        grid-template-columns:
+        repeat(2,1fr) !important;
+
+        gap:12px !important;
+    }
+
+    .cert-item{
+        width:100% !important;
+    }
+}
