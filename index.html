@@ -9,21 +9,19 @@
 
     <!-- SEO META DESCRIPTION -->
     <meta name="description" content="Website portofolio resmi Putri Ismah Ashilah, mahasiswa Bisnis Digital. Berpengalaman dalam komunikasi publik, media digital, dan pengelolaan konten kreatif.">
-
-    <!-- SEO KEYWORDS -->
     <meta name="keywords" content="Putri Ismah Ashilah, Putri Ismah, Portofolio Putri Ismah Ashilah, Yatsi Madani, UYM, Putri yatsi">
 
     <!-- CANONICAL URL -->
     <link rel="canonical" href="https://www.namaportofoliokamu.com/" />
 
-    <!-- OPEN GRAPH (Google & Sosial Media) -->
+    <!-- OPEN GRAPH -->
     <meta property="og:title" content="Putri Ismah Ashilah — Portofolio Resmi">
     <meta property="og:description" content="Portofolio resmi Putri Ismah Ashilah. Mahasiswa Bisnis Digital dengan minat komunikasi publik dan media digital.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.namaportofoliokamu.com/">
     <meta property="og:image" content="https://www.namaportofoliokamu.com/profile.jpg">
 
-    <!-- STRUCTURED DATA PERSON (PENTING UNTUK GOOGLE) -->
+    <!-- STRUCTURED DATA PERSON -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,10 +44,10 @@
     </script>
 
     <!-- GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- AOS Animation -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -59,552 +57,483 @@
 <nav class="navbar">
     <div class="nav-logo">Portofolio</div>
 
-    <div class="nav-actions">
-        <button id="themeToggle" aria-label="Toggle Dark Mode">🌙</button>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
-
     <ul class="nav-menu" id="navMenu">
         <li><a href="#profil" onclick="closeMenu()">Profil</a></li>
         <li><a href="#tentang" onclick="closeMenu()">Tentang</a></li>
+        <li><a href="#pendidikan" onclick="closeMenu()">Pendidikan</a></li>
         <li><a href="#pengalaman" onclick="closeMenu()">Pengalaman</a></li>
         <li><a href="#dokumentasi" onclick="closeMenu()">Dokumentasi</a></li>
         <li><a href="#kemampuan" onclick="closeMenu()">Kemampuan</a></li>
+        <li><a href="#startup" onclick="closeMenu()">Project</a></li>
         <li><a href="#sertifikat" onclick="closeMenu()">Sertifikat</a></li>
         <li><a href="#artikel" onclick="closeMenu()">Artikel</a></li>
-        <li><a href="#ketersediaan" onclick="closeMenu()">Ketersediaan</a></li>
-
     </ul>
+
+    <div class="nav-actions">
+        <button id="themeToggle" aria-label="Toggle Dark Mode">🌙</button>
+        <!-- RESPONSIVE HAMBURGER BUTTON -->
+        <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 </nav>
 
 
-<!-- HERO -->
+<!-- HERO SECTION WITH PURPLE AURORA EFFECT -->
 <header>
-<img src="profill.jpeg" class="profile-photo" alt="Foto Profil Putri Ismah Ashilah" data-aos="zoom-in">
-
-<h1 data-aos="fade-up">Putri Ismah Ashilah</h1>
-
-<p data-aos="fade-up" data-aos-delay="150">
-
-</p>
-<p>
-    Individu yang memiliki ketertarikan pada bidang Bisnis Digital, 
-    komunikasi publik, dan media digital. Berpengalaman dalam pengelolaan 
-    konten, publikasi kegiatan, serta pengembangan branding digital 
-    melalui pendekatan kreatif dan strategis.
-</p>
-
-    </p>
+    <div class="header-container">
+        <div class="avatar-wrapper" data-aos="zoom-in">
+            <img src="profill.jpeg" class="profile-photo" alt="Foto Profil Putri Ismah Ashilah">
+            <div class="glow-ring"></div>
+        </div>
+        <h1 data-aos="fade-up" data-aos-delay="100">Putri Ismah Ashilah</h1>
+        <div class="badge" data-aos="fade-up" data-aos-delay="200">Digital Business Student</div>
+        <p data-aos="fade-up" data-aos-delay="300">
+            Individu yang memiliki ketertarikan tinggi pada bidang Bisnis Digital, komunikasi publik, dan media digital. Berpengalaman dalam pengelolaan konten, publikasi kegiatan, serta pengembangan branding digital melalui pendekatan kreatif, analitis, dan strategis.
+        </p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+            <a href="#profil" class="btn-primary">Hubungi Saya</a>
+            <a href="#startup" class="btn-secondary">Lihat Project & Ide Bisnis</a>
+        </div>
+        <div class="scroll-down">🔽 Gulir ke bawah</div>
+    </div>
 </header>
 
 
-<!-- PROFIL -->
-<section id="profil">
-    
-    <h2 class="title">Profil Pribadi</h2>
-  <div class="card profile-grid" data-aos="fade-up">
+<!-- PROFIL & TENTANG GRID LAYOUT -->
+<section id="profil" class="grid-section">
+    <div class="container">
+        <div class="profile-layout">
+            <div class="card profile-info-card" data-aos="fade-right">
+                <h2 class="title">Profil Pribadi</h2>
+                <div class="profile-meta-grid">
+                    <div class="meta-item"><b>Nama:</b> <span>Putri Ismah Ashilah</span></div>
+                    <div class="meta-item"><b>TTL:</b> <span>Tangerang, 07 Mei 2005</span></div>
+                    <div class="meta-item"><b>Alamat:</b> <span>Kota Tangerang, Banten</span></div>
+                    <div class="meta-item"><b>Email:</b> <span><a href="mailto:putrismah7@gmail.com">putrismah7@gmail.com</a></span></div>
+                    <div class="meta-item"><b>Telegram:</b> <span><a href="https://t.me/prish7" target="_blank" rel="noopener">@prish7</a></span></div>
+                    <div class="meta-item"><b>Instagram:</b> <span><a href="https://www.instagram.com/7prish" target="_blank" rel="noopener">@7prish</a></span></div>
+                </div>
+            </div>
 
-        <div>
-            <p><b>Nama:</b> Putri Ismah Ashilah</p>
-            <p><b>TTL:</b> Tangerang, 07 Mei 2005</p>
-            <p><b>Alamat:</b> Kota Tangerang, Banten</p>
-        </div>
-        <div>
-            <p><b>Email:</b> 
-                <a href="mailto:putrismah7@gmail.com">putrismah7@gmail.com</a>
-            </p>
-            <p><b>Telegram:</b> 
-                <a href="https://t.me/prish7" target="_blank" rel="noopener">
-                    @prish7
-                </a>
-            </p>
-            <p><b>Instagram:</b> 
-                <a href="https://www.instagram.com/7prish" target="_blank" rel="noopener">
-                    @7prish
-                </a>
-            </p>
+            <div class="card about-card" data-aos="fade-left" id="tentang">
+                <h2 class="title">Tentang Saya</h2>
+                <p>
+                    Saya adalah Putri Ismah Ashilah, individu yang berfokus pada pengembangan <strong>Bisnis Digital</strong>, strategi komunikasi publik, serta pengelolaan media dan konten kreatif. Saya terbiasa terlibat dalam manajemen koordinasi tim, penyusunan konsep komunikasi digital, serta publikasi informasi secara strategis.
+                </p>
+                <p>
+                    Melalui pengalaman aktif dalam organisasi sosial dan kepengurusan media kreatif, saya berhasil mengasah kemampuan komunikasi publik, kepekaan analitis terhadap tren audiens, serta tanggung jawab profesional dalam mengelola *digital branding*.
+                </p>
+                <div class="cta-mini">
+                    <span>🚀 Terbuka untuk peluang magang, kolaborasi bisnis, dan ekspansi karier digital.</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- TENTANG -->
- <section id="tentang">
-
-    <h2 class="title">Tentang Saya</h2>
-    <div class="card" data-aos="fade-up">
-
-        <p>
-            Saya adalah Putri Ismah Ashilah, individu yang memiliki minat dan
-            ketertarikan pada pengembangan Bisnis Digital, komunikasi publik,
-            serta pengelolaan media dan konten kreatif. Terbiasa terlibat dalam
-            kegiatan yang membutuhkan koordinasi tim, penyusunan konsep komunikasi,
-            serta publikasi informasi kepada khalayak.
-        </p>
-
-        <p>
-            Memiliki pengalaman dalam organisasi dan kegiatan sosial yang
-            membentuk kemampuan komunikasi, tanggung jawab, serta kepekaan
-            terhadap kebutuhan audiens. Saya terbiasa bekerja dengan pendekatan
-            terstruktur namun tetap fleksibel, baik dalam kerja tim maupun secara mandiri.
-        </p>
-
-        <p>
-            Terbuka untuk peluang magang, kolaborasi, dan pengalaman profesional
-            yang dapat mengembangkan kompetensi di bidang bisnis digital,
-            media, dan komunikasi strategis.
-        </p>
-    </div>
-</section>
+<!-- HIDDEN TEXT SEO -->
 <section style="display:none">
     <h2>Putri Ismah</h2>
-    <p>
-        Putri Ismah Ashilah adalah mahasiswa Bisnis Digital yang aktif
-        dalam bidang komunikasi publik, media digital, dan pengelolaan
-        konten kreatif di Tangerang, Banten.
-    </p>
+    <p>Putri Ismah Ashilah adalah mahasiswa Bisnis Digital yang aktif dalam bidang komunikasi publik, media digital, dan pengelolaan konten kreatif di Tangerang, Banten.</p>
 </section>
 
-<!-- RIWAYAT PENDIDIKAN (TIMELINE) -->
+
+<!-- RIWAYAT PENDIDIKAN -->
 <section id="pendidikan">
-
-    <h2 class="title">Riwayat Pendidikan</h2>
-
-    <div class="timeline" data-aos="fade-up">
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Universitas Yatsi Madani</h3>
-                <span>Program Studi Bisnis Digital</span>
-                <p>Semester 6 — Sedang ditempuh</p>
+    <div class="container">
+        <h2 class="title centered">Riwayat Pendidikan</h2>
+        <div class="timeline" data-aos="fade-up">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="time-tag">Semester 6 — Sedang Ditempuh</span>
+                    <h3>Universitas Yatsi Madani</h3>
+                    <p class="sub">Program Studi Bisnis Digital</p>
+                    <p class="desc">Mengembangkan keahlian dalam manajemen bisnis berbasis IT, analisis data e-commerce, strategi growth marketing, dan rancangan model startup digital.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="time-tag">Pendidikan Menengah Atas</span>
+                    <h3>SMA Negeri 4 Kota Tangerang</h3>
+                    <p class="desc">Membangun karakter kepemimpinan, kedisiplinan akademik, serta aktif beradaptasi dalam lingkungan komunikasi sosial.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="time-tag">Pendidikan Menengah Pertama</span>
+                    <h3>SMP Negeri 15 Kota Tangerang</h3>
+                    <p class="desc">Memulai minat awal dalam kegiatan organisasi sekolah, kerja tim, serta dasar-dasar kreativitas digital.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="time-tag">Pendidikan Dasar</span>
+                    <h3>SD Negeri Pasar Baru 3 Kota Tangerang</h3>
+                    <p class="desc">Menanamkan pondasi etika belajar yang konsisten, berprestasi, dan pembentukan karakter adaptif awal.</p>
+                </div>
             </div>
         </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>SMA Negeri 4 Kota Tangerang</h3>
-                <p>Pendidikan Menengah Atas</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>SMP Negeri 15 Kota Tangerang</h3>
-                <p>Pendidikan Menengah Pertama</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>SD Negeri Pasar Baru 3 Kota Tangerang</h3>
-                <p>Pendidikan Dasar</p>
-            </div>
-        </div>
-
     </div>
-
 </section>
 
 
 <!-- PENGALAMAN -->
- <section id="pengalaman">
+<section id="pengalaman">
+    <div class="container">
+        <h2 class="title centered">Pengalaman Kerja & Organisasi</h2>
+        <div class="cards-grid">
+            <div class="card experience-card" data-aos="fade-up">
+                <div class="exp-icon">📢</div>
+                <h3>Humas</h3>
+                <p class="company">Pengabdian Masyarakat Kelurahan Sumur Pacing</p>
+                <ul>
+                    <li>Menjalin komunikasi strategis dengan mitra eksternal dan instansi kelurahan.</li>
+                    <li>Mengelola administrasi perizinan surat birokrasi kampus dan instansi terkait.</li>
+                    <li>Mengoordinasi mobilitas serta alur penyampaian informasi peserta kegiatan.</li>
+                </ul>
+            </div>
 
-    <h2 class="title">Pengalaman</h2>
-
-   <div class="card" data-aos="fade-up" data-aos-delay="100">
-
-        <h3>Humas – Pengabdian Masyarakat Kelurahan Sumur Pacing</h3>
-        <ul>
-            <li>Menjalin komunikasi dengan mitra eksternal</li>
-            <li>Perizinan surat kampus & kelurahan</li>
-            <li>Koordinasi peserta kegiatan</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>Volunteer – Media Kreatif Peduly Tangerang</h3>
-        <ul>
-            <li>Desain konten & poster kegiatan</li>
-            <li>Pengelolaan media sosial</li>
-            <li>Kampanye visual kegiatan sosial</li>
-        </ul>
+            <div class="card experience-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="exp-icon">🎨</div>
+                <h3>Volunteer – Media Kreatif</h3>
+                <p class="company">Peduly Tangerang</p>
+                <ul>
+                    <li>Mendesain layout konten interaktif dan media poster publikasi via Canva.</li>
+                    <li>Bertanggung jawab atas manajemen serta kurasi konten kreatif di media sosial.</li>
+                    <li>Menyusun strategi kampanye visual guna meningkatkan *awareness* gerakan sosial.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
+
 
 <!-- DOKUMENTASI -->
- <section id="dokumentasi">
-
-    <h2 class="title">Dokumentasi Pengalaman</h2>
-
-<div class="doc-item" data-aos="zoom-in">
-
-        <div class="doc-title">Tim Media Kreatif – Organisasi Peduly Tangerang</div>
-        <div class="doc-grid">
-            <div class="doc-item"><img src="peduly-1.jpeg" alt="Dokumentasi Media Kreatif Peduly Tangerang"></div>
-            <div class="doc-item"><img src="cameraa.jpeg" alt="Kegiatan Media Kreatif Peduly"></div>
-            <div class="doc-item"><img src="peduly-3.jpeg" alt="Tim Media Kreatif Peduly Tangerang"></div>
+<section id="dokumentasi">
+    <div class="container">
+        <h2 class="title">Dokumentasi Aksi Nyata</h2>
+        
+        <div class="doc-wrapper" data-aos="fade-up">
+            <h3 class="doc-section-title">✨ Tim Media Kreatif – Organisasi Peduly Tangerang</h3>
+            <div class="doc-grid">
+                <div class="doc-item"><img src="peduly-1.jpeg" alt="Peduly Tangerang 1"><div class="overlay">Creative Content</div></div>
+                <div class="doc-item"><img src="cameraa.jpeg" alt="Kegiatan Media Kreatif"><div class="overlay">Visual Production</div></div>
+                <div class="doc-item"><img src="peduly-3.jpeg" alt="Peduly Tangerang 3"><div class="overlay">Team Collaboration</div></div>
+            </div>
         </div>
-    </div>
 
-    <div class="doc-group">
-        <div class="doc-title">Tim Humas – Pengabdian Masyarakat Kelurahan Sumur Pacing</div>
-        <div class="doc-grid">
-            <div class="doc-item"><img src="sumur-1.jpeg" alt="Pengabdian Masyarakat Sumur Pacing"></div>
-            <div class="doc-item"><img src="sumur-2.jpeg" alt="Kegiatan Humas Pengabdian Masyarakat"></div>
-            <div class="doc-item"><img src="sumur-3.jpeg" alt="Tim Humas Sumur Pacing"></div>
+        <div class="doc-wrapper" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="doc-section-title">🤝 Tim Humas – Pengabdian Masyarakat Kelurahan Sumur Pacing</h3>
+            <div class="doc-grid">
+                <div class="doc-item"><img src="sumur-1.jpeg" alt="Sumur Pacing 1"><div class="overlay">Public Relations</div></div>
+                <div class="doc-item"><img src="sumur-2.jpeg" alt="Kegiatan Humas"><div class="overlay">Social Engagement</div></div>
+                <div class="doc-item"><img src="sumur-3.jpeg" alt="Tim Humas"><div class="overlay">Community Project</div></div>
+            </div>
         </div>
     </div>
 </section>
+
 
 <!-- KEMAMPUAN -->
- <section id="kemampuan">
-
-    <h2 class="title">Kemampuan</h2>
-<div class="skills" data-aos="fade-up">
-
-        <div class="skill">Komunikasi Digital & Publikasi Media</div>
-        <div class="skill">Desain Grafis (Canva)</div>
-        <div class="skill">Manajemen Konten Digital</div>
-        <div class="skill">Website & Branding Digital</div>
-        <div class="skill">Editing CapCut</div>
-        <div class="skill">Microsoft Office & Google Workspace</div>
-        <div class="skill">Website Dasar</div>
-
+<section id="kemampuan">
+    <div class="container">
+        <h2 class="title centered">Kompetensi Inti</h2>
+        <div class="skills-container" data-aos="zoom-in">
+            <div class="skill-tag"><span class="icon">💼</span> Komunikasi Digital & Publikasi Media</div>
+            <div class="skill-tag"><span class="icon">🎨</span> Desain Grafis (Canva)</div>
+            <div class="skill-tag"><span class="icon">📊</span> Manajemen Konten Digital</div>
+            <div class="skill-tag"><span class="icon">🌐</span> Website & Branding Digital</div>
+            <div class="skill-tag"><span class="icon">🎬</span> Editing CapCut</div>
+            <div class="skill-tag"><span class="icon">📈</span> Microsoft Office & Google Workspace</div>
+            <div class="skill-tag"><span class="icon">💻</span> Website Dasar</div>
+        </div>
     </div>
 </section>
 
-<!-- PROJECT BISNIS -->
+
+<!-- PROJECT BISNIS & DIGITAL SHOWCASE -->
 <section id="startup">
+    <div class="container">
+        <h2 class="title">Project Bisnis & Digital Showcase</h2>
+        <div class="project-grid">
+            <div class="card project-card" data-aos="fade-up">
+                <div class="proj-badge">E-Commerce Brand</div>
+                <h3>PRISH NANA — Branding UMKM Digital</h3>
+                <p>Pengembangan identitas visual premium untuk UMKM makanan ringan, mencakup strategi konten media sosial dan promosi tertarget bagi generasi muda.</p>
+                <a href="https://putriismahashilah.github.io/prish-nana/" target="_blank" rel="noopener" class="project-link-btn">Kunjungi Website Live 🔗</a>
+            </div>
 
-    <h2 class="title">Project Bisnis & Digital</h2>
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="proj-badge">Web Development</div>
+                <h3>Smootime Website Project</h3>
+                <p>Membangun platform website responsif dengan konsep modern minimalis demi memperkuat fungsionalitas publikasi komersial secara digital.</p>
+                <a href="http://smootime.my.id/" target="_blank" rel="noopener" class="project-link-btn">Kunjungi Website Live 🔗</a>
+            </div>
 
-    <div class="card" data-aos="fade-up">
-        <h3>PRISH NANA — Branding UMKM Digital</h3>
-        <p>
-            Pengembangan branding UMKM makanan ringan dengan fokus 
-            pada identitas visual, promosi media sosial, dan strategi 
-            pemasaran digital untuk target pasar generasi muda.
-        </p>
-    </div>
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="proj-badge">Creative Content Campaign</div>
+                <h3>Media Kreatif Peduly Tangerang</h3>
+                <p>Mengonsep aset media visual digital organisasi guna meningkatkan interaksi, jangkauan organik, dan kredibilitas di ruang publik digital.</p>
+            </div>
 
-    <div class="card" data-aos="fade-up">
-        <h3>Smootime Website Project</h3>
-        <p>
-            Pengembangan website sederhana sebagai media branding 
-            digital dan publikasi online dengan pendekatan tampilan 
-            modern, responsif, dan user friendly.
-        </p>
-    </div>
-
-    <div class="card" data-aos="fade-up">
-        <h3>Media Kreatif Peduly Tangerang</h3>
-        <p>
-            Berkontribusi dalam pengelolaan media kreatif organisasi 
-            sosial melalui desain konten, publikasi digital, serta 
-            kampanye visual untuk meningkatkan engagement audiens.
-        </p>
-    </div>
-
-</section>
-    
-<!-- SERTIFIKAT -->
- <section id="sertifikat">
-
-    <h2 class="title">Sertifikat</h2>
-    <div class="cert-grid" data-aos="fade-up">
-
-        <div class="cert-item"><img src="volunteer.jpeg" 
-            alt="Sertifikat Volunteer Peduly Tangerang"><p>Volunteer Peduly Tangerang</p></div>
-        <div class="cert-item"><img src="pelatihan.jpeg" 
-            alt="Sertifikat Pelatihan Kewirausahaan"><p>Pelatihan Kewirausahaan Sumur Pacing</p></div>
-        <div class="cert-item"><img src="dispora.jpeg" 
-            alt="Sertifikat Pelatihan Kewirausahaan"><p>Pelatihan Kewirausahaan Pemuda Kota Tangerang</p></div>
-        <div class="cert-item"><img src="ChatBot.jpeg" 
-            alt="Sertifikat Pelatihan BLK"><p>Pelatihan BLK Disnaker ChatBot</p></div>
-        <div class="cert-item"><img src="Pengurus.jpeg" 
-            alt="Sertifikat Tim Media Kreatif"><p>Tim Media Kreatif Peduly Tangerang</p></div>
-        <div class="cert-item"><img src="webinar-1.jpeg"
-            alt="Webinar AI Digital Marketing"><p>Webinar AI for Digital Marketing</p></div>
-        <div class="cert-item"><img src="webinar-2.jpeg" 
-            alt="Webinar Bisnis Digital"><p>Webinar Bisnis Digital Talks</p></div>
-        <div class="cert-item"><img src="partisipasi.jpeg" 
-            alt="Partisipasi  Indonesian youth excursion network"><p>Partisipasi  Indonesian youth excursion network</p></div>
-        <div class="cert-item"><img src="essay.jpeg" 
-            alt="Fair essay competition"><p>Fair essay competition</p></div>
-        <div class="cert-item"><img src="seminar-1.jpeg" 
-            alt="Seminar fakultas teknologi dan bisnis"><p>Seminar fakultas teknologi dan bisnis</p></div>
-        <div class="cert-item"><img src="seminar-2.jpg" 
-            alt="seminar Capital Market"><p>seminar Capital Market</p></div>
-        <div class="cert-item"><img src="seminar-3.jpg" 
-            alt="seminar generasi cerdas finansial"><p>Seminar Generasi Cerdas Finansial</p></div>
-        <div class="cert-item"><img src="haki-1.jpg" 
-            alt="haki prish nana"><p>Haki Prish Nana</p></div>
-        <div class="cert-item"><img src="haki-2.jpg" 
-            alt="haki tiga simpul kopi"><p>Haki Tiga Simpul Kopi</p></div>
-
+            <div class="card project-card special-idea" data-aos="fade-up" data-aos-delay="300" id="Ide Bisnis">
+                <div class="proj-badge idea">🚀 Startup Simulation</div>
+                <h3>Startup Business Simulation Project</h3>
+                <p>Formulasi komprehensif rancangan model bisnis (Business Model Canvas) serta analisis strategi penetrasi pasar digital guna merancang ekosistem startup berkelanjutan.</p>
+            </div>
+        </div>
     </div>
 </section>
 
 
-<!-- PUBLIKASI ARTIKEL -->
- <section id="artikel">
-
-    <h2 class="title">Publikasi Artikel</h2>
-
-    <article class="article-card" data-aos="fade-up">
-
-        <article class="article-card">
-            <h3>Negosiasi Bisnis Digital pada Brand Fashion Lokal dalam Kerja Sama dengan Influencer</h3>
-            <p class="article-meta">
-                Dipublikasikan di <strong>Kompasiana</strong>
-            </p>
-            <a href="https://www.kompasiana.com/prishash7/69425e6f34777c2f295603c2/negoisasi-bisnis-digital-pada-brand-fashion-lokal-dalam-kerja-sama-dengan-influencer"
-               target="_blank" rel="noopener" class="article-link">
-                Baca artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Pitching Berbasis Citra Brand sebagai Strategi Diferensiasi Brand Fashion Lokal</h3>
-            <p class="article-meta">
-                Dipublikasikan di <strong>Kompasiana</strong>
-            </p>
-            <a href="https://www.kompasiana.com/prishash7/69423312ed641563b34da0a2/pitching-berbasis-citra-brand-sebagai-strategi-diferensiasi-brand-fashion-lokal"
-               target="_blank" rel="noopener" class="article-link">
-                Baca artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Niat Baik Aja Nggak Cukup: Relawan Peduly Tangerang Tetap Waspada Risiko</h3>
-            <p class="article-meta">
-                Dipublikasikan di <strong>Kompasiana</strong>
-            </p>
-            <a href="https://www.kompasiana.com/prishash7/6874977e34777c1aa57f60c2/niat-baik-aja-nggak-cukup-relawan-peduly-tangerang-tetap-waspada-risiko"
-               target="_blank" rel="noopener" class="article-link">
-                Baca artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Kekacauan SPMB 2025: Bukti Lemahnya Manajemen Risiko</h3>
-            <p class="article-meta">
-                Dipublikasikan di <strong>Kompasiana</strong>
-            </p>
-            <a href="https://www.kompasiana.com/prishash7/685018d8c925c46111588a92/kekacauan-spmb-2025-kecurangan-sistem-eror-kesulitan-mendaftar-menjadi-bukti-lemahnya-manajemen-risiko"
-               target="_blank" rel="noopener" class="article-link">
-                Baca artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Pengabdian Masyarakat: Menyikap Karakteristik Generasi Z</h3>
-            <p class="article-meta">
-                Dipublikasikan di <strong>Kompasiana</strong>
-            </p>
-            <a href="https://www.kompasiana.com/prishash7/6767abb3ed641570336a41c2/pengabdian-masyarakat-menyikap-karakteristik-generasi-z"
-               target="_blank" rel="noopener" class="article-link">
-                Baca artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Evilspirit: Brand Fashion dengan Karakter Berani</h3>
-            <p class="article-meta">
-                Dipublikasikan di <strong>Kompasiana</strong>
-            </p>
-            <a href="https://www.kompasiana.com/prishash7/676430f734777c412d112122/evilspirit-brand-fashion-dengan-karakter-berani"
-               target="_blank" rel="noopener" class="article-link">
-                Baca artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Perjalanan Noe Row: Dari Langkah Kecil Menuju Kesuksesan Besar</h3>
-            <p class="article-meta">
-                Dipublikasikan di <strong>Kompasiana</strong>
-            </p>
-            <a href="https://www.kompasiana.com/prishash7/676427b2ed64156b07464db2/perjalanan-noe-row-dari-langkah-kecil-menuju-kesuksesan-besar"
-               target="_blank" rel="noopener" class="article-link">
-                Baca artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Pengaruh YouTubers terhadap Brand Pribadi</h3>
-            <p class="article-meta">
-                Dipublikasikan di <strong>Kompasiana</strong>
-            </p>
-            <a href="https://www.kompasiana.com/prishash7/67599d8ec925c4330c75f612/pengaruh-youtubers-terhadap-brand-pribadi"
-               target="_blank" rel="noopener" class="article-link">
-                Baca artikel
-            </a>
-        </article>
- <article class="article-card">
-            <h3>Pitching Ala Start-Up: Belajar Storytelling dan Negosiasi dari Drama Korea 2020</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/69572f4eed64157d865255a2/pitching-ala-start-up-belajar-storytelling-dan-negoisasi-dari-drama-korea-2020" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Dari Idol ke K-Beauty: Pelajaran Pitching Global dari Kolaborasi Tzuyu dengan Pond's Bright Miracle</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/69572a3134777c207a020a62/dari-idol-ke-k-beauty-pelajaran-pitching-global-dari-kolaborasi-tzuyu-dengan-pond-s-bright-miracle" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Kolaborasi Terbatas Lewat DM: Pitching Brand di Era Instagram</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/695724d4ed641504482e54e2/kolaborasi-terbatas-lewat-dm-pitching-brand-di-era-instagram" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Pitching Lewat Kepercayaan: Mengapa Brand Lebih Memilih YouTuber daripada Iklan Konvensional</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/6956800dc925c40e442b4202/pitching-lewat-kepercayaan-mengapa-brand-lebih-memilih-youtuber-daripada-iklan-konvensional" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Mengapa Banyak UMKM Gagal Pitching Padahal Produknya Berkualitas</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/69567b3634777c54cf2949d2/mengapa-banyak-umkm-gagal-pitching-padahal-produknya-berkualitas" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>K-Pop sebagai Alat Pitching Digital: Mengapa Fanbase Menjadi Daya Tawar Utama</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/69564f6fed6415128c541eb3/k-pop-sebagai-alat-pitching-digital-mengapa-fanbase-menjadi-daya-tawar-utama" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>K-Pop sebagai Alat Pitching Global: Mengapa Banyak Brand Berlomba Berkolaborasi dengan Idol Korea</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/6956399134777c70cb499172/k-pop-sebagai-alat-pitching-global-mengapa-banyak-brand-berlomba-berkolaborasi-dengan-idol-korea" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Pitching Bisnis Kopi Lokal di Era Digital: Studi Kasus Kopi Kenangan</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/695634e7ed641562964cf202/pitching-bisnis-kopi-lokal-di-era-digital-studi-kasus-kopi-kenangan" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Negosiasi Kolaborasi Komunitas Digital: Pembelajaran dari Peduly Tangerang</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/69560f5134777c199c677612/negoisasi-kolaborasi-komunitas-digital-pembelajaran-dari-peduly-tangerang" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Kolaborasi (G)I-DLE x Rexona: Ketika Pitching Brand Bicara Soal Nilai</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/69560629c925c42bf64c3732/kolaborasi-g-i-dle-x-rexona-ketika-pitching-brand-bicara-soal-nilai" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>BABYMONSTER x Good Day Latte: Pitching Emosional dalam Menarik Konsumen Generasi Z</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/6955fac8c925c42b5f65b5a2/babymonster-x-good-day-latte-pitching-emosional-dalam-menarik-konsumen-generasi-z" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
-        <article class="article-card">
-            <h3>Apa yang Bisa Dipelajari dari Kerja Sama BLACKPINK x Oreo dalam Negosiasi Brand Internasional</h3>
-            <p class="article-meta">Kompasiana</p>
-            <a href="https://www.kompasiana.com/prishash7/6955f791c925c4147f67ed72/apa-yang-bisa-dipelajari-dari-kerja-sama-blackpink-x-oreo-dalam-negoisasi-brand-internasioal" target="_blank">
-                Baca Artikel
-            </a>
-        </article>
-
+<!-- SERTIFIKAT (TETAP UTUH 14 BIJI TIDAK ADA YANG DIKURANGI) -->
+<section id="sertifikat">
+    <div class="container">
+        <h2 class="title centered">Sertifikat Profesional</h2>
+        <div class="cert-grid" data-aos="fade-up">
+            <div class="cert-item"><div class="img-box"><img src="volunteer.jpeg" alt="Sertifikat"></div><p>Volunteer Peduly Tangerang</p></div>
+            <div class="cert-item"><div class="img-box"><img src="pelatihan.jpeg" alt="Sertifikat"></div><p>Pelatihan Kewirausahaan Sumur Pacing</p></div>
+            <div class="cert-item"><div class="img-box"><img src="dispora.jpeg" alt="Sertifikat"></div><p>Pelatihan Kewirausahaan Pemuda Kota Tangerang</p></div>
+            <div class="cert-item"><div class="img-box"><img src="ChatBot.jpeg" alt="Sertifikat"></div><p>Pelatihan BLK Disnaker ChatBot</p></div>
+            <div class="cert-item"><div class="img-box"><img src="Pengurus.jpeg" alt="Sertifikat"></div><p>Tim Media Kreatif Peduly Tangerang</p></div>
+            <div class="cert-item"><div class="img-box"><img src="webinar-1.jpeg" alt="Sertifikat"></div><p>Webinar AI for Digital Marketing</p></div>
+            <div class="cert-item"><div class="img-box"><img src="webinar-2.jpeg" alt="Sertifikat"></div><p>Webinar Bisnis Digital Talks</p></div>
+            <div class="cert-item"><div class="img-box"><img src="partisipasi.jpeg" alt="Sertifikat"></div><p>Partisipasi Indonesian Youth Excursion Network</p></div>
+            <div class="cert-item"><div class="img-box"><img src="essay.jpeg" alt="Sertifikat"></div><p>Fair Essay Competition</p></div>
+            <div class="cert-item"><div class="img-box"><img src="seminar-1.jpeg" alt="Sertifikat"></div><p>Seminar Fakultas Teknologi dan Bisnis</p></div>
+            <div class="cert-item"><div class="img-box"><img src="seminar-2.jpg" alt="Sertifikat"></div><p>Seminar Capital Market</p></div>
+            <div class="cert-item"><div class="img-box"><img src="seminar-3.jpg" alt="Sertifikat"></div><p>Seminar Generasi Cerdas Finansial</p></div>
+            <div class="cert-item"><div class="img-box"><img src="haki-1.jpg" alt="Sertifikat"></div><p>HAKI Prish Nana</p></div>
+            <div class="cert-item"><div class="img-box"><img src="haki-2.jpg" alt="Sertifikat"></div><p>HAKI Tiga Simpul Kopi</p></div>
+        </div>
     </div>
 </section>
 
 
-<!-- WEBSITE -->
-<section>
-    <h2 class="title">Website</h2>
-    <div class="card">
-        <a href="http://smootime.my.id/" target="_blank" rel="noopener">http://smootime.my.id/</a>
+<!-- PUBLIKASI ARTIKEL KOMPASIANA -->
+<section id="artikel">
+    <div class="container">
+        <h2 class="title">Publikasi Artikel Ilmiah & Bisnis (Kompasiana)</h2>
+        <div class="article-grid" data-aos="fade-up">
+            
+            <!-- 1 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-negotiation">Negosiasi & Branding</span>
+                <h3>Negosiasi Bisnis Digital pada Brand Fashion Lokal dalam Kerja Sama dengan Influencer</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/69425e6f34777c2f295603c2/negoisasi-bisnis-digital-pada-brand-fashion-lokal-dalam-kerja-sama-dengan-influencer" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 2 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-pitching">Pitching Strategy</span>
+                <h3>Pitching Berbasis Citra Brand sebagai Strategi Diferensiasi Brand Fashion Lokal</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/69423312ed641563b34da0a2/pitching-berbasis-citra-brand-sebagai-strategi-diferensiasi-brand-fashion-lokal" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 3 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-risk">Manajemen Risiko</span>
+                <h3>Niat Baik Aja Nggak Cukup: Relawan Peduly Tangerang Tetap Waspada Risiko</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/6874977e34777c1aa57f60c2/niat-baik-aja-nggak-cukup-relawan-peduly-tangerang-tetap-waspada-risiko" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 4 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-risk">Manajemen Risiko</span>
+                <h3>Kekacauan SPMB 2025: Bukti Lemahnya Manajemen Risiko</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/685018d8c925c46111588a92/kekacauan-spmb-2025-kecurangan-sistem-eror-kesulitan-mendaftar-menjadi-bukti-lemahnya-manajemen-risiko" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 5 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-social">Sosial & Gen Z</span>
+                <h3>Bagian Pengabdian Masyarakat: Menyikap Karakteristik Generasi Z</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/6767abb3ed641570336a41c2/pengabdian-masyarakat-menyikap-karakteristik-generasi-z" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 6 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-negotiation">Brand & Fashion</span>
+                <h3>Evilspirit: Brand Fashion dengan Karakter Berani</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/676430f734777c412d112122/evilspirit-brand-fashion-dengan-karakter-berani" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 7 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-pitching">Storytelling Success</span>
+                <h3>Perjalanan Noe Row: Dari Langkah Kecil Menuju Kesuksesan Besar</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/676427b2ed64156b07464db2/perjalanan-noe-row-dari-langkah-kecil-menuju-kesuksesan-besar" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 8 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-negotiation">Personal Branding</span>
+                <h3>Pengaruh YouTubers terhadap Brand Pribadi</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/67599d8ec925c4330c75f612/pengaruh-youtubers-terhadap-brand-pribadi" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 9 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-pitching">Storytelling</span>
+                <h3>Pitching Ala Start-Up: Belajar Storytelling dan Negosiasi dari Drama Korea 2020</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/69572f4eed64157d865255a2/pitching-ala-start-up-belajar-storytelling-dan-negoisasi-dari-drama-korea-2020" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 10 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-kpop">K-Pop & Branding</span>
+                <h3>Dari Idol ke K-Beauty: Pelajaran Pitching Global Kolaborasi Tzuyu x Pond's</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/69572a3134777c207a020a62/dari-idol-ke-k-beauty-pelajaran-pitching-global-dari-kolaborasi-tzuyu-dengan-pond-s-bright-miracle" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 11 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-pitching">Social Media</span>
+                <h3>Kolaborasi Terbatas Lewat DM: Pitching Brand di Era Instagram</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/695724d4ed641504482e54e2/kolaborasi-terbatas-lewat-dm-pitching-brand-di-era-instagram" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 12 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-pitching">Digital Marketing</span>
+                <h3>Pitching Lewat Kepercayaan: Mengapa Brand Memilih YouTuber daripada Iklan Konvensional</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/6956800dc925c40e442b4202/pitching-lewat-kepercayaan-mengapa-brand-lebih-memilih-youtuber-daripada-iklan-konvensional" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 13 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-risk">UMKM Growth</span>
+                <h3>Mengapa Banyak UMKM Gagal Pitching Padahal Produknya Berkualitas</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/69567b3634777c54cf2949d2/mengapa-banyak-umkm-gagal-pitching-padahal-produknya-berkualitas" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 14 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-kpop">K-Pop Fanbase</span>
+                <h3>K-Pop sebagai Alat Pitching Digital: Mengapa Fanbase Menjadi Daya Tawar Utama</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/69564f6fed6415128c541eb3/k-pop-sebagai-alat-pitching-digital-mengapa-fanbase-menjadi-daya-tawar-utama" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 15 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-kpop">Global Pitching</span>
+                <h3>K-Pop sebagai Alat Pitching Global: Mengapa Banyak Brand Berlomba Berkolaborasi dengan Idol</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/6956399134777c70cb499172/k-pop-sebagai-alat-pitching-global-mengapa-brand-berlomba-berkolaborasi-dengan-idol-korea" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 16 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-negotiation">Studi Kasus</span>
+                <h3>Pitching Bisnis Kopi Lokal di Era Digital: Studi Kasus Kopi Kenangan</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/695634e7ed641562964cf202/pitching-bisnis-kopi-lokal-di-era-digital-studi-kasus-kopi-kenangan" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 17 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-social">Digital Community</span>
+                <h3>Negosiasi Kolaborasi Komunitas Digital: Pembelajaran dari Peduly Tangerang</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/69560f5134777c199c677612/negoisasi-kolaborasi-komunitas-digital-pembelajaran-dari-peduly-tangerang" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 18 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-kpop">Value Marketing</span>
+                <h3>Kolaborasi (G)I-DLE x Rexona: Ketika Pitching Brand Bicara Soal Nilai</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/69560629c925c42bf64c3732/kolaborasi-g-i-dle-x-rexona-ketika-pitching-brand-bicara-soal-nilai" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 19 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-kpop">Gen Z Target</span>
+                <h3>BABYMONSTER x Good Day Latte: Pitching Emosional Menarik Konsumen Gen Z</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/6955fac8c925c42b5f65b5a2/babymonster-x-good-day-latte-pitching-emosional-dalam-menarik-konsumen-generasi-z" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+            <!-- 20 -->
+            <div class="card article-item-card">
+                <span class="art-tag tag-negotiation">Global Brand</span>
+                <h3>Apa yang Bisa Dipelajari dari Kerja Sama BLACKPINK x Oreo dalam Negosiasi Brand</h3>
+                <p>Dipublikasikan di Kompasiana</p>
+                <a href="https://www.kompasiana.com/prishash7/6955f791c925c4147f67ed72/apa-yang-bisa-dipelajari-dari-kerja-sama-blackpink-x-oreo-dalam-negoisasi-brand-internasioal" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
+            </div>
+
+        </div>
     </div>
 </section>
+
 
 <!-- KETERSEDIAAN -->
- <section id="ketersediaan">
-
-    <h2 class="title">Ketersediaan</h2>
-    <div class="card">
-        <ul>
-            <li>Siap menjalani magang</li>
-            <li>Siap belajar hal baru</li>
-            <li>Mudah beradaptasi</li>
-            <li>Bekerja tim & individu</li>
-            <li>Terbuka pada SOP perusahaan</li>
-        </ul>
+<section id="ketersediaan" class="footer-cta">
+    <div class="container text-center" data-aos="zoom-in">
+        <h2>Ketersediaan Kerja & Kolaborasi</h2>
+        <p>Saya siap beradaptasi dengan ritme profesional perusahaan, mematuhi SOP kerja, serta berkontribusi nyata baik secara mandiri maupun kolaborasi dinamis tim.</p>
+        <div class="status-grid">
+            <span class="status-tag">Magang Bisnis Digital</span>
+            <span class="status-tag">Agile Learning Developer</span>
+            <span class="status-tag">Flexible & Adaptif</span>
+        </div>
     </div>
 </section>
 
 <footer>
-    © 2026 Putri Ismah Ashilah | Digital Portfolio
+    <div class="container">
+        <p>© 2026 Putri Ismah Ashilah | Digital Portfolio & Creative Resume</p>
+    </div>
 </footer>
 
-<!-- AOS Animation -->
+
+<!-- AOS Animation Scripts -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 900,
+    duration: 750,
     easing: 'ease-out-cubic',
     once: true,
-    offset: 120
+    offset: 40
   });
 </script>
 
+<!-- Navigation Scripts with Smooth Hamburger and iOS Fix -->
 <script>
 function toggleMenu(){
-
     const menu = document.getElementById("navMenu");
-
+    const burger = document.getElementById("hamburgerBtn");
     menu.classList.toggle("active");
-
-    document.body.classList.toggle("menu-open");
+    burger.classList.toggle("open");
 }
-
 function closeMenu(){
-
-    document
-    .getElementById("navMenu")
-    .classList
-    .remove("active");
-
-    document.body.classList.remove("menu-open");
+    document.getElementById("navMenu").classList.remove("active");
+    document.getElementById("hamburgerBtn").classList.remove("open");
 }
-</script>
-<script>
 window.addEventListener("scroll", function(){
     const navbar = document.querySelector(".navbar");
-    if(window.scrollY > 50){
+    if(window.scrollY > 30){
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
@@ -612,31 +541,15 @@ window.addEventListener("scroll", function(){
 });
 </script>
 
-<script>
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-</script>
-
-
-
+<!-- Dark Mode Toggles -->
 <script>
 const toggle = document.getElementById("themeToggle");
-
 if(localStorage.getItem("theme") === "dark"){
     document.body.classList.add("dark");
     toggle.textContent = "☀️";
 }
-
 toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
-
     if(document.body.classList.contains("dark")){
         localStorage.setItem("theme","dark");
         toggle.textContent = "☀️";
@@ -646,7 +559,5 @@ toggle.addEventListener("click", () => {
     }
 });
 </script>
-
-
 </body>
 </html>
