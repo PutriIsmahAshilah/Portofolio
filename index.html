@@ -87,9 +87,16 @@
         <div class="avatar-wrapper" data-aos="zoom-in">
             <img src="profill.jpeg" class="profile-photo" alt="Foto Profil Putri Ismah Ashilah">
             <div class="glow-ring"></div>
+            <!-- TAMBAHAN: Efek partikel cahaya di belakang foto -->
+            <div class="glow-particle"></div>
         </div>
         <h1 data-aos="fade-up" data-aos-delay="100">Putri Ismah Ashilah</h1>
-        <div class="badge" data-aos="fade-up" data-aos-delay="200">Digital Business Student</div>
+        
+        <!-- PERUBAHAN: Menggunakan animasi mengetik otomatis -->
+        <div class="badge-dynamic" data-aos="fade-up" data-aos-delay="200">
+            I am a <span class="typing-text"></span>
+        </div>
+        
         <p data-aos="fade-up" data-aos-delay="300">
             Individu yang memiliki ketertarikan tinggi pada bidang Bisnis Digital, komunikasi publik, dan media digital. Berpengalaman dalam pengelolaan konten, publikasi kegiatan, serta pengembangan branding digital melalui pendekatan kreatif, analitis, dan strategis.
         </p>
@@ -100,7 +107,6 @@
         <div class="scroll-down">🔽 Gulir ke bawah</div>
     </div>
 </header>
-
 
 <!-- PROFIL & TENTANG GRID LAYOUT -->
 <section id="profil" class="grid-section">
@@ -519,44 +525,50 @@
   });
 </script>
 
-<!-- Navigation Scripts with Smooth Hamburger and iOS Fix -->
+<!-- Script Animasi Mengetik Otomatis yang Lebih Stabil -->
 <script>
-function toggleMenu(){
-    const menu = document.getElementById("navMenu");
-    const burger = document.getElementById("hamburgerBtn");
-    menu.classList.toggle("active");
-    burger.classList.toggle("open");
-}
-function closeMenu(){
-    document.getElementById("navMenu").classList.remove("active");
-    document.getElementById("hamburgerBtn").classList.remove("open");
-}
-window.addEventListener("scroll", function(){
-    const navbar = document.querySelector(".navbar");
-    if(window.scrollY > 30){
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-});
-</script>
+document.addEventListener("DOMContentLoaded", function() {
+    const words = ["Digital Business Student.", "Content Creator.", "Public Relations Volunteer.", "Branding Enthusiast."];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newWordDelay = 2000; // Waktu jeda saat teks selesai diketik
+    
+    const typingTextSpan = document.querySelector(".typing-text");
 
-<!-- Dark Mode Toggles -->
-<script>
-const toggle = document.getElementById("themeToggle");
-if(localStorage.getItem("theme") === "dark"){
-    document.body.classList.add("dark");
-    toggle.textContent = "☀️";
-}
-toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    if(document.body.classList.contains("dark")){
-        localStorage.setItem("theme","dark");
-        toggle.textContent = "☀️";
-    } else {
-        localStorage.setItem("theme","light");
-        toggle.textContent = "🌙";
+    function type() {
+        if (!typingTextSpan) return; // Mencegah error jika element tidak ketemu
+        
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            // Menghapus karakter
+            typingTextSpan.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            // Mengetik karakter
+            typingTextSpan.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            // Jika selesai mengetik satu kata penuh, berhenti sebentar lalu hapus
+            setTimeout(() => isDeleting = true, newWordDelay);
+        } else if (isDeleting && charIndex === 0) {
+            // Jika kata sudah terhapus semua, ganti ke kata berikutnya
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+
+        // Tentukan kecepatan (mengetik vs menghapus)
+        const delay = isDeleting ? erasingDelay : typingDelay;
+        setTimeout(type, delay);
     }
+
+    // Mulai animasi pengetikan setelah jeda setengah detik
+    setTimeout(type, 500);
 });
 </script>
 </body>
