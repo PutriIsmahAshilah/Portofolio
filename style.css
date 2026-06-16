@@ -687,3 +687,80 @@ footer {
         gap: 12px;
     }
 }
+
+/* ==========================================
+   PERBAIKAN RESPONSIF NAVIGASI & TOMBOL HP
+   ========================================== */
+
+/* Memastikan tombol bisa disentuh oleh jari di layar HP */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Animasi perubahan garis 3 menjadi silang (X) saat aktif */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    padding: 5px;
+}
+
+/* Tampilan Menu di HP (Layar di bawah 768px) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Munculkan garis 3 di HP */
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: -100%; /* Sembunyi di atas layar sebelum diklik */
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-card);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 100px 0 40px;
+        transition: all 0.4s ease-in-out;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        z-index: 9998;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Ketika tombol garis 3 diklik, menu ini akan turun otomatis */
+    .nav-menu.active {
+        top: 0;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
