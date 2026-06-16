@@ -525,49 +525,103 @@
   });
 </script>
 
-<!-- Script Animasi Mengetik Otomatis yang Lebih Stabil -->
+<!-- SCRIPT FIX: MENU HP, DARK MODE, DAN ANIMASI MENGETIK -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+    
+    // === 1. FUNGSI TOMBOL GARIS 3 (HAMBURGER MENU) HP ===
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const navMenu = document.getElementById("navMenu");
+    
+    // Kita buat fungsi global agar onclick="" di HTML tidak error
+    window.toggleMenu = function() {
+        if (hamburgerBtn && navMenu) {
+            hamburgerBtn.classList.toggle("open");
+            navMenu.classList.toggle("active");
+        }
+    }
+
+    window.closeMenu = function() {
+        if (hamburgerBtn && navMenu) {
+            hamburgerBtn.classList.remove("open");
+            navMenu.classList.remove("active");
+        }
+    }
+
+    // Menutup menu jika user mengklik di luar area menu HP
+    document.addEventListener("click", function(e) {
+        if (hamburgerBtn && navMenu) {
+            if (!hamburgerBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                closeMenu();
+            }
+        }
+    });
+
+
+    // === 2. FUNGSI TOMBOL MODE GELAP / TERANG (DARK MODE) ===
+    const themeToggle = document.getElementById("themeToggle");
+    const body = document.body;
+
+    if (themeToggle) {
+        // Cek memori browser, apakah sebelumnya user pakai mode gelap
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            body.classList.add("dark");
+            themeToggle.textContent = "☀️";
+        } else {
+            themeToggle.textContent = "🌙";
+        }
+
+        // Jalankan fungsi ganti tema saat ikon diklik
+        themeToggle.addEventListener("click", function(e) {
+            e.preventDefault();
+            body.classList.toggle("dark");
+            
+            if (body.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+                themeToggle.textContent = "☀️";
+            } else {
+                localStorage.setItem("theme", "light");
+                themeToggle.textContent = "🌙";
+            }
+        });
+    }
+
+
+    // === 3. FUNGSI ANIMASI MENGETIK OTOMATIS ===
     const words = ["Digital Business Student.", "Content Creator.", "Public Relations Volunteer.", "Branding Enthusiast."];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     const typingDelay = 100;
     const erasingDelay = 50;
-    const newWordDelay = 2000; // Waktu jeda saat teks selesai diketik
+    const newWordDelay = 2000;
     
     const typingTextSpan = document.querySelector(".typing-text");
 
     function type() {
-        if (!typingTextSpan) return; // Mencegah error jika element tidak ketemu
-        
+        if (!typingTextSpan) return;
         const currentWord = words[wordIndex];
         
         if (isDeleting) {
-            // Menghapus karakter
             typingTextSpan.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
         } else {
-            // Mengetik karakter
             typingTextSpan.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
         }
 
         if (!isDeleting && charIndex === currentWord.length) {
-            // Jika selesai mengetik satu kata penuh, berhenti sebentar lalu hapus
             setTimeout(() => isDeleting = true, newWordDelay);
         } else if (isDeleting && charIndex === 0) {
-            // Jika kata sudah terhapus semua, ganti ke kata berikutnya
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
         }
 
-        // Tentukan kecepatan (mengetik vs menghapus)
         const delay = isDeleting ? erasingDelay : typingDelay;
         setTimeout(type, delay);
     }
 
-    // Mulai animasi pengetikan setelah jeda setengah detik
     setTimeout(type, 500);
 });
 </script>
