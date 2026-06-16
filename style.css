@@ -720,3 +720,61 @@ footer {
         max-width: 300px;
     }
 }
+
+/* ==========================================
+   FIX MASSAL ANTI-ZOOM & GESER UNTUK HP
+   ========================================== */
+@media (max-width: 768px) {
+    /* 1. Paksa semua elemen html & body mengunci lebar layar HP */
+    html, body {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden !important;
+        position: relative;
+    }
+
+    /* 2. Amankan semua container agar tidak tumpah keluar */
+    .container, .header-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        overflow: hidden;
+    }
+
+    /* 3. Perbaikan Grid Sertifikat (Biang kerok utama layar melar ke kanan) */
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Paksa jadi 2 kolom rapi di HP */
+        gap: 15px !important;
+        width: 100% !important;
+    }
+
+    .cert-item .img-box {
+        height: 110px !important; /* Perkecil tinggi kotak gambar di HP agar proporsional */
+    }
+
+    /* 4. Perbaikan Grid Dokumentasi Aksi Nyata */
+    .doc-grid {
+        grid-template-columns: 1fr !important; /* Jadi 1 kolom memanjang ke bawah di HP */
+        gap: 15px !important;
+    }
+
+    /* 5. Perbaikan Grid Project & Artikel Kompasiana */
+    .project-grid, .article-grid {
+        grid-template-columns: 1fr !important; /* Ubah dari grid menyamping menjadi 1 kolom ke bawah */
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    /* 6. Perbaikan teks profil agar tidak terpotong */
+    .meta-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    .meta-item span {
+        text-align: left;
+        word-break: break-all; /* Mencegah email/link panjang memotong layar */
+    }
+}
