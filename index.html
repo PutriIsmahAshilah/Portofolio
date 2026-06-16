@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO TITLE -->
     <title>Putri Ismah Ashilah — Portofolio Resmi | Mahasiswa Bisnis Digital</title>
 
-    <!-- SEO META DESCRIPTION -->
     <meta name="description" content="Website portofolio resmi Putri Ismah Ashilah, mahasiswa Bisnis Digital. Berpengalaman dalam komunikasi publik, media digital, dan pengelolaan konten kreatif.">
     <meta name="keywords" content="Putri Ismah Ashilah, Putri Ismah, Portofolio Putri Ismah Ashilah, Yatsi Madani, UYM, Putri yatsi">
 
-    <!-- CANONICAL URL -->
     <link rel="canonical" href="https://www.namaportofoliokamu.com/" />
 
-    <!-- OPEN GRAPH -->
     <meta property="og:title" content="Putri Ismah Ashilah — Portofolio Resmi">
     <meta property="og:description" content="Portofolio resmi Putri Ismah Ashilah. Mahasiswa Bisnis Digital dengan minat komunikasi publik dan media digital.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.namaportofoliokamu.com/">
     <meta property="og:image" content="https://www.namaportofoliokamu.com/profile.jpg">
 
-    <!-- STRUCTURED DATA PERSON -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -43,56 +38,51 @@
     }
     </script>
 
-    <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 <nav class="navbar">
-    <div class="nav-logo">Portofolio</div>
+    <div class="nav-container">
+        <div class="nav-logo">Portofolio</div>
 
-    <ul class="nav-menu" id="navMenu">
-        <li><a href="#profil" onclick="closeMenu()">Profil</a></li>
-        <li><a href="#tentang" onclick="closeMenu()">Tentang</a></li>
-        <li><a href="#pendidikan" onclick="closeMenu()">Pendidikan</a></li>
-        <li><a href="#pengalaman" onclick="closeMenu()">Pengalaman</a></li>
-        <li><a href="#dokumentasi" onclick="closeMenu()">Dokumentasi</a></li>
-        <li><a href="#kemampuan" onclick="closeMenu()">Kemampuan</a></li>
-        <li><a href="#startup" onclick="closeMenu()">Project</a></li>
-        <li><a href="#sertifikat" onclick="closeMenu()">Sertifikat</a></li>
-        <li><a href="#artikel" onclick="closeMenu()">Artikel</a></li>
-    </ul>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#profil" onclick="closeMenu()">Profil</a></li>
+            <li><a href="#tentang" onclick="closeMenu()">Tentang</a></li>
+            <li><a href="#pendidikan" onclick="closeMenu()">Pendidikan</a></li>
+            <li><a href="#pengalaman" onclick="closeMenu()">Pengalaman</a></li>
+            <li><a href="#dokumentasi" onclick="closeMenu()">Dokumentasi</a></li>
+            <li><a href="#kemampuan" onclick="closeMenu()">Kemampuan</a></li>
+            <li><a href="#startup" onclick="closeMenu()">Project</a></li>
+            <li><a href="#sertifikat" onclick="closeMenu()">Sertifikat</a></li>
+            <li><a href="#artikel" onclick="closeMenu()">Artikel</a></li>
+        </ul>
 
-    <div class="nav-actions">
-        <button id="themeToggle" aria-label="Toggle Dark Mode">🌙</button>
-        <!-- RESPONSIVE HAMBURGER BUTTON -->
-        <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="nav-actions">
+            <button id="themeToggle" aria-label="Toggle Dark Mode">🌙</button>
+            <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
 </nav>
 
 
-<!-- HERO SECTION WITH PURPLE AURORA EFFECT -->
 <header>
     <div class="header-container">
         <div class="avatar-wrapper" data-aos="zoom-in">
             <img src="profill.jpeg" class="profile-photo" alt="Foto Profil Putri Ismah Ashilah">
             <div class="glow-ring"></div>
-            <!-- TAMBAHAN: Efek partikel cahaya di belakang foto -->
             <div class="glow-particle"></div>
         </div>
         <h1 data-aos="fade-up" data-aos-delay="100">Putri Ismah Ashilah</h1>
         
-        <!-- PERUBAHAN: Menggunakan animasi mengetik otomatis -->
         <div class="badge-dynamic" data-aos="fade-up" data-aos-delay="200">
             I am a <span class="typing-text"></span>
         </div>
@@ -108,7 +98,6 @@
     </div>
 </header>
 
-<!-- PROFIL & TENTANG GRID LAYOUT -->
 <section id="profil" class="grid-section">
     <div class="container">
         <div class="profile-layout">
@@ -140,14 +129,12 @@
     </div>
 </section>
 
-<!-- HIDDEN TEXT SEO -->
 <section style="display:none">
     <h2>Putri Ismah</h2>
     <p>Putri Ismah Ashilah adalah mahasiswa Bisnis Digital yang aktif dalam bidang komunikasi publik, media digital, dan pengelolaan konten kreatif di Tangerang, Banten.</p>
 </section>
 
 
-<!-- RIWAYAT PENDIDIKAN -->
 <section id="pendidikan">
     <div class="container">
         <h2 class="title centered">Riwayat Pendidikan</h2>
@@ -190,7 +177,6 @@
 </section>
 
 
-<!-- PENGALAMAN -->
 <section id="pengalaman">
     <div class="container">
         <h2 class="title centered">Pengalaman Kerja & Organisasi</h2>
@@ -200,7 +186,7 @@
                 <h3>Humas</h3>
                 <p class="company">Pengabdian Masyarakat Kelurahan Sumur Pacing</p>
                 <ul>
-                    <li>Menjalin komunikasi strategis dengan mitra eksternal dan instansi kelurahan.</li>
+                    <li>Menjalin komunikasi strategis dengan mitra eksternal and instansi kelurahan.</li>
                     <li>Mengelola administrasi perizinan surat birokrasi kampus dan instansi terkait.</li>
                     <li>Mengoordinasi mobilitas serta alur penyampaian informasi peserta kegiatan.</li>
                 </ul>
@@ -221,7 +207,6 @@
 </section>
 
 
-<!-- DOKUMENTASI -->
 <section id="dokumentasi">
     <div class="container">
         <h2 class="title">Dokumentasi Aksi Nyata</h2>
@@ -247,7 +232,6 @@
 </section>
 
 
-<!-- KEMAMPUAN -->
 <section id="kemampuan">
     <div class="container">
         <h2 class="title centered">Kompetensi Inti</h2>
@@ -264,7 +248,6 @@
 </section>
 
 
-<!-- PROJECT BISNIS & DIGITAL SHOWCASE -->
 <section id="startup">
     <div class="container">
         <h2 class="title">Project Bisnis & Digital Showcase</h2>
@@ -299,7 +282,6 @@
 </section>
 
 
-<!-- SERTIFIKAT (TETAP UTUH 14 BIJI TIDAK ADA YANG DIKURANGI) -->
 <section id="sertifikat">
     <div class="container">
         <h2 class="title centered">Sertifikat Profesional</h2>
@@ -323,13 +305,11 @@
 </section>
 
 
-<!-- PUBLIKASI ARTIKEL KOMPASIANA -->
 <section id="artikel">
     <div class="container">
         <h2 class="title">Publikasi Artikel Ilmiah & Bisnis (Kompasiana)</h2>
         <div class="article-grid" data-aos="fade-up">
             
-            <!-- 1 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-negotiation">Negosiasi & Branding</span>
                 <h3>Negosiasi Bisnis Digital pada Brand Fashion Lokal dalam Kerja Sama dengan Influencer</h3>
@@ -337,7 +317,6 @@
                 <a href="https://www.kompasiana.com/prishash7/69425e6f34777c2f295603c2/negoisasi-bisnis-digital-pada-brand-fashion-lokal-dalam-kerja-sama-dengan-influencer" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 2 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-pitching">Pitching Strategy</span>
                 <h3>Pitching Berbasis Citra Brand sebagai Strategi Diferensiasi Brand Fashion Lokal</h3>
@@ -345,7 +324,6 @@
                 <a href="https://www.kompasiana.com/prishash7/69423312ed641563b34da0a2/pitching-berbasis-citra-brand-sebagai-strategi-diferensiasi-brand-fashion-lokal" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 3 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-risk">Manajemen Risiko</span>
                 <h3>Niat Baik Aja Nggak Cukup: Relawan Peduly Tangerang Tetap Waspada Risiko</h3>
@@ -353,7 +331,6 @@
                 <a href="https://www.kompasiana.com/prishash7/6874977e34777c1aa57f60c2/niat-baik-aja-nggak-cukup-relawan-peduly-tangerang-tetap-waspada-risiko" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 4 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-risk">Manajemen Risiko</span>
                 <h3>Kekacauan SPMB 2025: Bukti Lemahnya Manajemen Risiko</h3>
@@ -361,7 +338,6 @@
                 <a href="https://www.kompasiana.com/prishash7/685018d8c925c46111588a92/kekacauan-spmb-2025-kecurangan-sistem-eror-kesulitan-mendaftar-menjadi-bukti-lemahnya-manajemen-risiko" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 5 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-social">Sosial & Gen Z</span>
                 <h3>Bagian Pengabdian Masyarakat: Menyikap Karakteristik Generasi Z</h3>
@@ -369,7 +345,6 @@
                 <a href="https://www.kompasiana.com/prishash7/6767abb3ed641570336a41c2/pengabdian-masyarakat-menyikap-karakteristik-generasi-z" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 6 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-negotiation">Brand & Fashion</span>
                 <h3>Evilspirit: Brand Fashion dengan Karakter Berani</h3>
@@ -377,7 +352,6 @@
                 <a href="https://www.kompasiana.com/prishash7/676430f734777c412d112122/evilspirit-brand-fashion-dengan-karakter-berani" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 7 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-pitching">Storytelling Success</span>
                 <h3>Perjalanan Noe Row: Dari Langkah Kecil Menuju Kesuksesan Besar</h3>
@@ -385,7 +359,6 @@
                 <a href="https://www.kompasiana.com/prishash7/676427b2ed64156b07464db2/perjalanan-noe-row-dari-langkah-kecil-menuju-kesuksesan-besar" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 8 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-negotiation">Personal Branding</span>
                 <h3>Pengaruh YouTubers terhadap Brand Pribadi</h3>
@@ -393,7 +366,6 @@
                 <a href="https://www.kompasiana.com/prishash7/67599d8ec925c4330c75f612/pengaruh-youtubers-terhadap-brand-pribadi" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 9 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-pitching">Storytelling</span>
                 <h3>Pitching Ala Start-Up: Belajar Storytelling dan Negosiasi dari Drama Korea 2020</h3>
@@ -401,7 +373,6 @@
                 <a href="https://www.kompasiana.com/prishash7/69572f4eed64157d865255a2/pitching-ala-start-up-belajar-storytelling-dan-negoisasi-dari-drama-korea-2020" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 10 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-kpop">K-Pop & Branding</span>
                 <h3>Dari Idol ke K-Beauty: Pelajaran Pitching Global Kolaborasi Tzuyu x Pond's</h3>
@@ -409,7 +380,6 @@
                 <a href="https://www.kompasiana.com/prishash7/69572a3134777c207a020a62/dari-idol-ke-k-beauty-pelajaran-pitching-global-dari-kolaborasi-tzuyu-dengan-pond-s-bright-miracle" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 11 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-pitching">Social Media</span>
                 <h3>Kolaborasi Terbatas Lewat DM: Pitching Brand di Era Instagram</h3>
@@ -417,7 +387,6 @@
                 <a href="https://www.kompasiana.com/prishash7/695724d4ed641504482e54e2/kolaborasi-terbatas-lewat-dm-pitching-brand-di-era-instagram" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 12 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-pitching">Digital Marketing</span>
                 <h3>Pitching Lewat Kepercayaan: Mengapa Brand Memilih YouTuber daripada Iklan Konvensional</h3>
@@ -425,7 +394,6 @@
                 <a href="https://www.kompasiana.com/prishash7/6956800dc925c40e442b4202/pitching-lewat-kepercayaan-mengapa-brand-lebih-memilih-youtuber-daripada-iklan-konvensional" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 13 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-risk">UMKM Growth</span>
                 <h3>Mengapa Banyak UMKM Gagal Pitching Padahal Produknya Berkualitas</h3>
@@ -433,7 +401,6 @@
                 <a href="https://www.kompasiana.com/prishash7/69567b3634777c54cf2949d2/mengapa-banyak-umkm-gagal-pitching-padahal-produknya-berkualitas" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 14 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-kpop">K-Pop Fanbase</span>
                 <h3>K-Pop sebagai Alat Pitching Digital: Mengapa Fanbase Menjadi Daya Tawar Utama</h3>
@@ -441,7 +408,6 @@
                 <a href="https://www.kompasiana.com/prishash7/69564f6fed6415128c541eb3/k-pop-sebagai-alat-pitching-digital-mengapa-fanbase-menjadi-daya-tawar-utama" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 15 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-kpop">Global Pitching</span>
                 <h3>K-Pop sebagai Alat Pitching Global: Mengapa Banyak Brand Berlomba Berkolaborasi dengan Idol</h3>
@@ -449,7 +415,6 @@
                 <a href="https://www.kompasiana.com/prishash7/6956399134777c70cb499172/k-pop-sebagai-alat-pitching-global-mengapa-brand-berlomba-berkolaborasi-dengan-idol-korea" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 16 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-negotiation">Studi Kasus</span>
                 <h3>Pitching Bisnis Kopi Lokal di Era Digital: Studi Kasus Kopi Kenangan</h3>
@@ -457,7 +422,6 @@
                 <a href="https://www.kompasiana.com/prishash7/695634e7ed641562964cf202/pitching-bisnis-kopi-lokal-di-era-digital-studi-kasus-kopi-kenangan" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 17 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-social">Digital Community</span>
                 <h3>Negosiasi Kolaborasi Komunitas Digital: Pembelajaran dari Peduly Tangerang</h3>
@@ -465,7 +429,6 @@
                 <a href="https://www.kompasiana.com/prishash7/69560f5134777c199c677612/negoisasi-kolaborasi-komunitas-digital-pembelajaran-dari-peduly-tangerang" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 18 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-kpop">Value Marketing</span>
                 <h3>Kolaborasi (G)I-DLE x Rexona: Ketika Pitching Brand Bicara Soal Nilai</h3>
@@ -473,7 +436,6 @@
                 <a href="https://www.kompasiana.com/prishash7/69560629c925c42bf64c3732/kolaborasi-g-i-dle-x-rexona-ketika-pitching-brand-bicara-soal-nilai" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 19 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-kpop">Gen Z Target</span>
                 <h3>BABYMONSTER x Good Day Latte: Pitching Emosional Menarik Konsumen Gen Z</h3>
@@ -481,7 +443,6 @@
                 <a href="https://www.kompasiana.com/prishash7/6955fac8c925c42b5f65b5a2/babymonster-x-good-day-latte-pitching-emosional-dalam-menarik-konsumen-generasi-z" target="_blank" rel="noopener" class="art-btn">Baca Artikel ↗</a>
             </div>
 
-            <!-- 20 -->
             <div class="card article-item-card">
                 <span class="art-tag tag-negotiation">Global Brand</span>
                 <h3>Apa yang Bisa Dipelajari dari Kerja Sama BLACKPINK x Oreo dalam Negosiasi Brand</h3>
@@ -494,7 +455,6 @@
 </section>
 
 
-<!-- KETERSEDIAAN -->
 <section id="ketersediaan" class="footer-cta">
     <div class="container text-center" data-aos="zoom-in">
         <h2>Ketersediaan Kerja & Kolaborasi</h2>
@@ -514,7 +474,6 @@
 </footer>
 
 
-<!-- AOS Animation Scripts -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -525,15 +484,13 @@
   });
 </script>
 
-<!-- SCRIPT FIX: MENU HP, DARK MODE, DAN ANIMASI MENGETIK -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     
-    // === 1. FUNGSI TOMBOL GARIS 3 (HAMBURGER MENU) HP ===
+    // 1. LOGIKA UTAMA HAMBURGER MENU (GARIS 3 HP)
     const hamburgerBtn = document.getElementById("hamburgerBtn");
     const navMenu = document.getElementById("navMenu");
-    
-    // Kita buat fungsi global agar onclick="" di HTML tidak error
+
     window.toggleMenu = function() {
         if (hamburgerBtn && navMenu) {
             hamburgerBtn.classList.toggle("open");
@@ -548,7 +505,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Menutup menu jika user mengklik di luar area menu HP
+    // Tutup otomatis jika layar diklik di luar area menu HP
     document.addEventListener("click", function(e) {
         if (hamburgerBtn && navMenu) {
             if (!hamburgerBtn.contains(e.target) && !navMenu.contains(e.target)) {
@@ -558,12 +515,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    // === 2. FUNGSI TOMBOL MODE GELAP / TERANG (DARK MODE) ===
+    // 2. LOGIKA UTAMA SWITCH MODE GELAP TERANG (DARK MODE)
     const themeToggle = document.getElementById("themeToggle");
     const body = document.body;
 
     if (themeToggle) {
-        // Cek memori browser, apakah sebelumnya user pakai mode gelap
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme === "dark") {
             body.classList.add("dark");
@@ -572,7 +528,6 @@ document.addEventListener("DOMContentLoaded", function() {
             themeToggle.textContent = "🌙";
         }
 
-        // Jalankan fungsi ganti tema saat ikon diklik
         themeToggle.addEventListener("click", function(e) {
             e.preventDefault();
             body.classList.toggle("dark");
@@ -588,7 +543,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    // === 3. FUNGSI ANIMASI MENGETIK OTOMATIS ===
+    // 3. LOGIKA UTAMA TEKS MENGETIK OTOMATIS (TYPING EFFECT)
     const words = ["Digital Business Student.", "Content Creator.", "Public Relations Volunteer.", "Branding Enthusiast."];
     let wordIndex = 0;
     let charIndex = 0;
