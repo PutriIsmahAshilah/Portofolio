@@ -1,173 +1,228 @@
-/* ==========================================
-   1. VARIABEL WARNA & SISTEM UTAMA (TEMA)
-   ========================================== */
+/* ==========================================================================
+   GLOBAL SETTINGS & VARIABLES (TEMA UNGU PREMIUM)
+   ========================================================================== */
 :root {
-    --bg-primary: #f8f9fa;
-    --bg-card: #ffffff;
-    --text-main: #495057;
-    --text-heading: #212529;
     --primary: #6f42c1;
-    --accent: #593196;
+    --primary-glow: rgba(111, 66, 193, 0.25);
+    --accent: #a29bfe; /* Diperbaiki: Ditambahkan agar gradien ring berfungsi */
     --secondary: #6c757d;
+    --bg-body: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-heading: #212529;
+    --text-main: #495057;
     --border-color: #e9ecef;
-    --shadow: 0 4px 20px rgba(0,0,0,0.05);
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.06);
+    --shadow: 0 5px 15px rgba(0,0,0,0.08); /* Diperbaiki: Ditambahkan agar bayangan profile-photo terdefinisi */
 }
-
-/* Pengaturan Variabel Saat Mode Gelap Aktif */
 body.dark {
-    --bg-primary: #0b0c10;
-    --bg-card: #1f2833;
-    --text-main: #c5a059; /* Menjaga konsistensi teks artikel/konten */
-    --text-heading: #ffffff;
-    --primary: #bb86fc;
-    --accent: #da70d6;
-    --secondary: #959595;
-    --border-color: #2d3748;
-    --shadow: 0 4px 20px rgba(0,0,0,0.5);
+    --bg-body: #0b0f19;
+    --bg-card: #131c2e;
+    --text-heading: #f8f9fa;
+    --text-main: #ced4da;
+    --border-color: #1e293b;
+    --navbar-bg: rgba(19, 28, 46, 0.95);
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.4);
+    --shadow: 0 5px 15px rgba(0,0,0,0.5); /* Diperbaiki: Bayangan mode gelap */
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-body);
     color: var(--text-main);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
-    overflow-x: hidden; /* Mencegah layar bisa digeser ke kanan-kiri (anti-zoom) */
 }
-
 .container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
+    padding: 60px 0;
 }
-
-
-/* ==========================================
-   2. NAVBAR & NAVIGASI (FIX LAPTOP & HP)
-   ========================================== */
+/* Typography Utility */
+h1, h2, h3, h4 {
+    color: var(--text-heading);
+    font-weight: 600;
+}
+.title {
+    font-size: 1.75rem;
+    margin-bottom: 35px;
+    position: relative;
+    display: inline-block;
+}
+.title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+.title.centered {
+    display: block;
+    text-align: center;
+}
+.title.centered::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+/* ==========================================================================
+   NAVBAR COMPONENT
+   ========================================================================== */
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--bg-card);
+    top: 0; left: 0; width: 100%;
+    background: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 9999;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-    padding: 0;
+    transition: background 0.3s ease;
 }
-
 .nav-container {
+    width: 90%;
     max-width: 1200px;
+    height: 70px;
     margin: 0 auto;
-    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
-    width: 100%;
 }
-
 .nav-logo {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--primary);
-    cursor: default;
+    letter-spacing: -0.5px;
 }
-
-/* Menu Tampilan Laptop */
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 20px;
-    margin: 0;
-    padding: 0;
 }
-
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-heading);
-    font-size: 0.95rem;
+    color: var(--text-main);
+    font-size: 0.85rem;
     font-weight: 500;
-    transition: color 0.3s ease;
-    cursor: pointer;
+    transition: color 0.2s ease;
 }
-
 .nav-menu a:hover {
     color: var(--primary);
 }
-
-/* Area Kanan (Tombol Mode Gelap + Hamburger) */
 .nav-actions {
     display: flex;
     align-items: center;
     gap: 15px;
-    z-index: 10000; /* Selalu di paling atas agar tidak macet diklik */
 }
-
 #themeToggle {
     background: none;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    padding: 5px;
-    display: inline-block;
-    pointer-events: auto !important;
+    user-select: none;
 }
-
-/* Tombol Garis 3 HP */
 .hamburger {
-    display: none; /* Sembunyi di Laptop */
+    display: none;
     flex-direction: column;
-    justify-content: space-between;
-    width: 22px;
-    height: 16px;
+    gap: 5px;
     cursor: pointer;
-    pointer-events: auto !important;
 }
-
 .hamburger span {
-    display: block;
-    height: 2.5px;
-    width: 100%;
+    width: 24px;
+    height: 2px;
     background-color: var(--text-heading);
-    border-radius: 3px;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
-
-/* Animasi Garis 3 Menjadi Silang (X) */
-.hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-
-/* ==========================================
-   3. HERO / HEADER SECTION (AURORA EFFECT)
-   ========================================== */
+/* ==========================================================================
+   HERO / HEADER SECTION
+   ========================================================================== */
 header {
-    padding: 150px 0 80px;
+    padding-top: 150px;
+    padding-bottom: 80px;
     text-align: center;
-    background: radial-gradient(circle at 50% 30%, rgba(111, 66, 193, 0.08), transparent 60%);
-    position: relative;
+    background: radial-gradient(circle at top right, var(--primary-glow) 0%, transparent 60%);
 }
-
 .header-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
+    width: 90%;
 }
-
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 10px;
+}
+.badge-dynamic {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+header p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.btn-primary, .btn-secondary {
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
+.btn-secondary {
+    background-color: var(--bg-card);
+    color: var(--text-heading);
+    border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+    background-color: var(--border-color);
+}
+.scroll-down {
+    margin-top: 50px;
+    font-size: 0.75rem;
+    color: var(--secondary);
+    animation: bounce 2s infinite;
+}
 /* Wrapper Foto Melayang & Efek Glow */
 .avatar-wrapper {
     position: relative;
@@ -175,7 +230,6 @@ header {
     height: 160px;
     margin: 0 auto 25px;
 }
-
 .profile-photo {
     width: 100%;
     height: 100%;
@@ -187,594 +241,468 @@ header {
     box-shadow: var(--shadow);
     animation: floatAnimation 4s ease-in-out infinite;
 }
-
 @keyframes floatAnimation {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
-
 .glow-ring {
     position: absolute;
     top: -5px; left: -5px; right: -5px; bottom: -5px;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--primary), var(--accent));
     z-index: 1;
-    opacity: 0.6;
+    animation: rotateRing 6s linear infinite;
 }
-
-header h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--text-heading);
-    margin-bottom: 10px;
-}
-
-/* Badge Animasi Mengetik */
-.badge-dynamic {
-    display: inline-block;
-    padding: 6px 16px;
-    background-color: rgba(111, 66, 193, 0.1);
-    color: var(--primary);
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-header p {
-    font-size: 1.1rem;
-    color: var(--text-main);
-    margin-bottom: 30px;
-}
-
-/* Tombol-tombol Utama */
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.btn-primary, .btn-secondary {
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background-color: var(--primary);
-    color: white;
-    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
-}
-
-.btn-primary:hover {
-    background-color: var(--accent);
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background-color: var(--bg-card);
-    color: var(--text-heading);
-    border: 1px solid var(--border-color);
-}
-
-.btn-secondary:hover {
-    background-color: var(--border-color);
-    transform: translateY(-2px);
-}
-
-.scroll-down {
-    font-size: 0.9rem;
-    color: var(--secondary);
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-6px); }
-    60% { transform: translateY(-3px); }
-}
-
-
-/* ==========================================
-   4. SECTIONS & CARDS DESAIN UTAMA
-   ========================================== */
-section {
-    padding: 80px 0;
-}
-
-.title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-heading);
-    margin-bottom: 40px;
+/* ==========================================================================
+   VIDEO BACKGROUND SEKSI PROFIL
+   ========================================================================== */
+.profile-video-section {
     position: relative;
-    display: inline-block;
+    overflow: hidden;
+    background-color: transparent !important;
 }
-
-.title::after {
-    content: '';
+.video-background-container {
     position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 50px;
-    height: 4px;
-    background-color: var(--primary);
-    border-radius: 2px;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    overflow: hidden;
 }
-
-.title.centered {
-    display: block;
-    text-align: center;
+.bg-video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
-
-.title.centered::after {
-    left: 50%;
-    transform: translateX(-50%);
+.video-overlay-tint {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.85), rgba(255, 255, 255, 0.93));
 }
-
-/* Komponen Kartu Global */
-.card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+body.dark .video-overlay-tint {
+    background: linear-gradient(135deg, rgba(11, 15, 25, 0.88), rgba(19, 28, 46, 0.95));
 }
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+.relative-content {
+    position: relative;
+    z-index: 2;
 }
-
-
-/* ==========================================
-   5. GRID LAYOUT: PROFIL & TENTANG SAYA
-   ========================================== */
+/* Grid Layout Profil */
 .profile-layout {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 30px;
 }
-
 .profile-meta-grid {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 15px;
 }
-
 .meta-item {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    border-bottom: 1px dashed var(--border-color);
     padding-bottom: 8px;
 }
-
 .meta-item a {
     color: var(--primary);
     text-decoration: none;
 }
-
+.about-card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
 .cta-mini {
     margin-top: 25px;
-    padding: 15px;
-    background-color: rgba(111, 66, 193, 0.05);
-    border-left: 4px solid var(--primary);
+    padding: 12px;
+    background-color: var(--primary-glow);
+    border-left: 3px solid var(--primary);
     border-radius: 4px;
-    font-weight: 500;
-}
-
-
-/* ==========================================
-   6. TIMELINE (RIWAYAT PENDIDIKAN)
-   ========================================== */
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 30px;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0; left: 7px;
-    width: 2px;
-    background-color: var(--border-color);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -29px;
-    top: 6px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    border: 3px solid var(--bg-primary);
-}
-
-.timeline-content {
-    background-color: var(--bg-card);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
-}
-
-.time-tag {
     font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--primary);
-    background-color: rgba(111, 66, 193, 0.1);
-    padding: 4px 10px;
-    border-radius: 12px;
-}
-
-.timeline-content h3 {
-    margin-top: 10px;
-    color: var(--text-heading);
-}
-
-.timeline-content .sub {
-    font-weight: 500;
-    color: var(--secondary);
-    font-size: 0.9rem;
-}
-
-
-/* ==========================================
-   7. PENGALAMAN & DOKUMENTASI
-   ========================================== */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.experience-card ul {
-    list-style-position: inside;
-    margin-top: 15px;
-    color: var(--text-main);
-}
-
-.experience-card ul li {
-    margin-bottom: 8px;
-}
-
-.doc-wrapper {
-    margin-bottom: 40px;
-}
-
-.doc-section-title {
-    font-size: 1.15rem;
-    color: var(--text-heading);
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.doc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.doc-item {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    height: 200px;
-    box-shadow: var(--shadow);
-}
-
-.doc-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.doc-item:hover img {
-    transform: scale(1.08);
-}
-
-.doc-item .overlay {
-    position: absolute;
-    bottom: 0; left: 0; width: 100%;
-    background: linear-gradient(transparent, rgba(0,0,0,0.7));
-    color: white;
-    padding: 15px;
-    font-size: 0.9rem;
     font-weight: 500;
 }
-
-
-/* ==========================================
-   8. KEMAMPUAN (SKILL TAGS)
-   ========================================== */
+/* ==========================================================================
+   SKILLS COMPONENT
+   ========================================================================== */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     justify-content: center;
 }
-
 .skill-tag {
-    background-color: var(--bg-card);
+    background: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 10px 20px;
-    border-radius: 30px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
     font-weight: 500;
-    color: var(--text-heading);
-    box-shadow: var(--shadow);
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }
-
-
-/* ==========================================
-   9. SHOWCASE PROJECT & SERTIFIKAT
-   ========================================== */
-.project-grid {
+.skill-tag.khusus-startup {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-glow);
+}
+/* ==========================================================================
+   EXPERIENCE & TIMELINE COMPONENT
+   ========================================================================== */
+.cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
 }
-
+.experience-text-card ul {
+    list-style-position: outside;
+    padding-left: 18px;
+    font-size: 0.85rem;
+}
+.experience-text-card li {
+    margin-bottom: 8px;
+}
+.exp-text-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--primary-glow);
+    padding: 3px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.experience-text-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+.experience-text-card .company {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+/* ==========================================================================
+   PORTFOLIO SHOWCASE COMPONENT
+   ========================================================================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
 .project-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
-
 .proj-badge {
-    align-self: flex-start;
-    padding: 4px 10px;
     font-size: 0.75rem;
     font-weight: 600;
-    background-color: #e3f2fd;
-    color: #0d47a1;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
-
-.proj-badge.idea {
-    background-color: #fff3e0;
-    color: #e65100;
-}
-
-.project-link-btn {
-    margin-top: 15px;
-    display: inline-block;
     color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
+    margin-bottom: 8px;
 }
-
-/* Sertifikat Gallery */
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-}
-
-.cert-item {
-    text-align: center;
-}
-
-.cert-item .img-box {
-    width: 100%;
-    height: 140px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
+.project-card h3 {
+    font-size: 1.1rem;
     margin-bottom: 10px;
 }
-
-.cert-item img {
+.project-card p {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+.project-link-btn {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    align-self: flex-start;
+}
+/* ==========================================================================
+   STARTUP BUSINESS IDEA SECTION
+   ========================================================================== */
+.startup-summary-bar {
+    background: var(--primary-glow);
+    border-left: 4px solid var(--primary);
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    color: var(--text-heading);
+}
+.startup-main-card {
+    padding: 40px;
+}
+.startup-header-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+.edgyfit-logo-box {
+    background: linear-gradient(135deg, var(--primary) 0%, #4a148c 100%);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.4);
+}
+.logo-f {
+    color: #a29bfe !important;
+}
+.startup-name {
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+}
+.startup-tagline {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    font-weight: 500;
+}
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin-bottom: 30px;
+}
+.startup-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+.startup-detail-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+.startup-detail-item p {
+    font-size: 0.85rem;
+    text-align: justify;
+}
+/* ==========================================================================
+   TIMELINE COMPONENT
+   ========================================================================== */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--border-color);
+    top: 0; bottom: 0; left: 20px;
+}
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 40px;
+}
+.timeline-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    left: 14px;
+    top: 6px;
+    z-index: 2;
+}
+.time-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 5px;
+}
+.timeline-content h3 {
+    font-size: 1.1rem;
+}
+.timeline-content .sub {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.timeline-content .desc {
+    font-size: 0.85rem;
+}
+/* ==========================================================================
+   DOCUMENTATION GALLERY COMPONENT
+   ========================================================================== */
+.doc-wrapper {
+    margin-bottom: 45px;
+}
+.doc-section-title {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+.doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+.doc-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 200px;
+    border: 1px solid var(--border-color);
+}
+.doc-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
 }
-
-.cert-item p {
-    font-size: 0.85rem;
+.doc-item:hover img {
+    transform: scale(1.05);
+}
+.doc-item .overlay {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: #fff;
+    padding: 15px;
+    font-size: 0.8rem;
     font-weight: 500;
-    color: var(--text-heading);
 }
-
-
-/* ==========================================
-   10. ARTIKEL KOMPASIANA & FOOTER
-   ========================================== */
+/* ==========================================================================
+   CERTIFICATES COMPONENT
+   ========================================================================== */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+.cert-item {
+    text-align: center;
+}
+.cert-item .img-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow-sm);
+}
+.cert-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+.cert-item p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+/* ==========================================================================
+   ARTIKEL KOMPASIANA & FOOTER
+   ========================================================================== */
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
-
 .article-item-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 25px;
 }
-
 .art-tag {
-    align-self: flex-start;
     font-size: 0.75rem;
-    padding: 3px 8px;
-    border-radius: 4px;
     font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 4px;
+    align-self: flex-start;
     margin-bottom: 12px;
 }
-
-/* Kategori Warna Tag Artikel */
-.tag-negotiation { background-color: #e8f5e9; color: #1b5e20; }
-.tag-pitching { background-color: #fff3e0; color: #e65100; }
-.tag-risk { background-color: #ffebee; color: #c62828; }
-.tag-social { background-color: #f3e5f5; color: #4a148c; }
-.tag-kpop { background-color: #e0f7fa; color: #006064; }
-
+.tag-negotiation { background: rgba(40, 167, 69, 0.1); color: #28a745; }
+.tag-pitching { background: rgba(0, 123, 255, 0.1); color: #007bff; }
+.tag-risk { background: rgba(220, 53, 69, 0.1); color: #dc3545; }
+.tag-social { background: rgba(23, 162, 184, 0.1); color: #17a2b8; }
+.tag-kpop { background: rgba(232, 62, 140, 0.1); color: #e83e8c; }
+.tag-genz { background: rgba(111, 66, 193, 0.1); color: #6f42c1; }
+.tag-global { background: rgba(253, 126, 20, 0.1); color: #fd7e14; }
+.article-item-card h3 {
+    font-size: 1.05rem;
+    color: var(--text-heading);
+    margin-bottom: 8px;
+    flex-grow: 1;
+}
+.article-item-card p {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
 .art-btn {
-    margin-top: 15px;
-    text-decoration: none;
-    color: var(--primary);
+    font-size: 0.85rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    color: var(--primary);
 }
-
 .footer-cta {
-    background: linear-gradient(rgba(111, 66, 193, 0.05), rgba(111, 66, 193, 0.02));
-    border-top: 1px solid var(--border-color);
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+    text-align: center;
 }
-
 .status-grid {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+    margin-top: 25px;
 }
-
 .status-tag {
-    padding: 8px 18px;
-    background-color: var(--bg-card);
+    background: var(--bg-card);
     border: 1px solid var(--border-color);
+    padding: 8px 20px;
     border-radius: 20px;
-    font-weight: 600;
-    color: var(--primary);
+    font-size: 0.85rem;
 }
-
 footer {
     padding: 30px 0;
-    text-align: center;
     border-top: 1px solid var(--border-color);
-    background-color: var(--bg-card);
-    font-size: 0.9rem;
+    text-align: center;
+    font-size: 0.85rem;
 }
-
-
-/* ==========================================
-   11. RESPONSIF KHUSUS MEDIA QUERIES (HP)
-   ========================================== */
+/* ==========================================================================
+   ANIMATIONS & RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@keyframes rotateRing {
+    100% { transform: rotate(360deg); }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-6px); }
+    60% { transform: translateY(-3px); }
+}
 @media (max-width: 992px) {
-    .hamburger {
-        display: flex; /* Aktifkan tombol garis 3 di HP */
+    .profile-layout {
+        grid-template-columns: 1fr;
     }
-
+}
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    
     .nav-menu {
         position: fixed;
-        top: -100%; /* Sembunyikan menu ke atas layar sebelum diklik */
-        left: 0;
-        width: 100%;
-        background-color: var(--bg-card);
+        top: 70px; left: -100%; width: 100%; height: calc(100vh - 70px);
+        background: var(--navbar-bg);
         flex-direction: column;
         align-items: center;
-        gap: 15px;
-        padding: 90px 0 30px;
-        transition: all 0.4s ease-in-out;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        z-index: 9998; /* Di bawah tombol aksi agar tidak menutupi tombol klik */
-        opacity: 0;
-        pointer-events: none;
-        max-height: 85vh;
-        overflow-y: auto; /* Menu bisa di-scroll jika kepanjangan di HP kecil */
-    }
-
-    /* Keadaan menu aktif saat dibuka di HP */
-    .nav-menu.active {
-        top: 0;
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .profile-layout {
-        grid-template-columns: 1fr; /* Mengubah susunan profil menjadi satu baris lurus di HP */
-    }
-
-    header h1 {
-        font-size: 2.1rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        text-align: center;
-        max-width: 300px;
-    }
-}
-
-/* ==========================================
-   FIX MASSAL ANTI-ZOOM & GESER UNTUK HP
-   ========================================== */
-@media (max-width: 768px) {
-    /* 1. Paksa semua elemen html & body mengunci lebar layar HP */
-    html, body {
-        width: 100%;
-        max-width: 100vw;
-        overflow-x: hidden !important;
-        position: relative;
-    }
-
-    /* 2. Amankan semua container agar tidak tumpah keluar */
-    .container, .header-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        overflow: hidden;
-    }
-
-    /* 3. Perbaikan Grid Sertifikat (Biang kerok utama layar melar ke kanan) */
-    .cert-grid {
-        grid-template-columns: repeat(2, 1fr) !important; /* Paksa jadi 2 kolom rapi di HP */
-        gap: 15px !important;
-        width: 100% !important;
-    }
-
-    .cert-item .img-box {
-        height: 110px !important; /* Perkecil tinggi kotak gambar di HP agar proporsional */
-    }
-
-    /* 4. Perbaikan Grid Dokumentasi Aksi Nyata */
-    .doc-grid {
-        grid-template-columns: 1fr !important; /* Jadi 1 kolom memanjang ke bawah di HP */
-        gap: 15px !important;
-    }
-
-    /* 5. Perbaikan Grid Project & Artikel Kompasiana */
-    .project-grid, .article-grid {
-        grid-template-columns: 1fr !important; /* Ubah dari grid menyamping menjadi 1 kolom ke bawah */
-        width: 100% !important;
-        gap: 20px !important;
-    }
-
-    /* 6. Perbaikan teks profil agar tidak terpotong */
-    .meta-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2px;
+        padding-top: 40px;
+        transition: 0.3s ease;
+        overflow-y: auto;
     }
     
-    .meta-item span {
-        text-align: left;
-        word-break: break-all; /* Mencegah email/link panjang memotong layar */
-    }
+    .nav-menu.active { left: 0; }
+    
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 }
